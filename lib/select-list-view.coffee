@@ -23,7 +23,7 @@ class MySelectListView extends SelectListView
     "<li><b>#{item.label}</b><div>#{item.detail}</div></li>"
 
   getFilterKey: ->
-    "label"
+    "fuzzy"
 
   show: (items) ->
     # Now you will add your select list as a modal panel to the workspace
