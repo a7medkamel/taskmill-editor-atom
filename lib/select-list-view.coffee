@@ -25,7 +25,6 @@ class MySelectListView extends SelectListView
   getFilterKey: ->
     "label"
 
-  # todo [akamel] remote from work space on done
   show: (items) ->
     # Now you will add your select list as a modal panel to the workspace
     @panel ?= atom.workspace.addModalPanel(item: this)
@@ -40,6 +39,11 @@ class MySelectListView extends SelectListView
 
   hide: ->
     @panel?.hide()
+
+  # Tear down any state and detach
+  destroy: ->
+    @element.remove()
+    @panel?.destroy()
 
   @show: (p$items) ->
     Promise
@@ -57,6 +61,8 @@ class MySelectListView extends SelectListView
             )
 
             ret.show(items);
+          ).finally(->
+            ret.destroy();
           );
       )
 
