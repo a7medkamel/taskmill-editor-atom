@@ -9,7 +9,7 @@
   "activationCommands": {
     "atom-workspace": "taskmill-editor-atom:chose"
   },
-  "repository": "https://github.com/atom/taskmill-editor-atom",
+  "repository": "https://github.com/a7medkamel/taskmill-editor-atom",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
