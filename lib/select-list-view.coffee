@@ -1,3 +1,5 @@
+# https://atom.io/docs/v1.3.1/upgrading-to-1-0-apis-upgrading-your-package
+
 {SelectListView} = require 'atom-space-pen-views'
 
 Promise = require 'bluebird'
