@@ -2,7 +2,7 @@
   "name": "taskmill",
   "displayName": "TaskMill",
   "description": "Run Node Scripts hosted on GitHub through your editor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "a7medkamel",
   "main": "./lib/taskmill-editor-atom",
   "keywords": [],
