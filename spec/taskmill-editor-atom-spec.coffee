@@ -12,7 +12,7 @@ describe "TaskmillEditorAtom", ->
     workspaceElement = atom.views.getView(atom.workspace)
     activationPromise = atom.packages.activatePackage('taskmill-editor-atom')
 
-  describe "when the taskmill-editor-atom:toggle event is triggered", ->
+  describe "when the taskmill-editor-atom:chose event is triggered", ->
     it "hides and shows the modal panel", ->
       # Before the activation event the view is not on the DOM, and no panel
       # has been created
@@ -20,7 +20,7 @@ describe "TaskmillEditorAtom", ->
 
       # This is an activation event, triggering it will cause the package to be
       # activated.
-      atom.commands.dispatch workspaceElement, 'taskmill-editor-atom:toggle'
+      atom.commands.dispatch workspaceElement, 'taskmill-editor-atom:chose'
 
       waitsForPromise ->
         activationPromise
@@ -33,7 +33,7 @@ describe "TaskmillEditorAtom", ->
 
         taskmillEditorAtomPanel = atom.workspace.panelForItem(taskmillEditorAtomElement)
         expect(taskmillEditorAtomPanel.isVisible()).toBe true
-        atom.commands.dispatch workspaceElement, 'taskmill-editor-atom:toggle'
+        atom.commands.dispatch workspaceElement, 'taskmill-editor-atom:chose'
         expect(taskmillEditorAtomPanel.isVisible()).toBe false
 
     it "hides and shows the view", ->
@@ -49,7 +49,7 @@ describe "TaskmillEditorAtom", ->
 
       # This is an activation event, triggering it causes the package to be
       # activated.
-      atom.commands.dispatch workspaceElement, 'taskmill-editor-atom:toggle'
+      atom.commands.dispatch workspaceElement, 'taskmill-editor-atom:chose'
 
       waitsForPromise ->
         activationPromise
@@ -58,5 +58,5 @@ describe "TaskmillEditorAtom", ->
         # Now we can test for view visibility
         taskmillEditorAtomElement = workspaceElement.querySelector('.taskmill-editor-atom')
         expect(taskmillEditorAtomElement).toBeVisible()
-        atom.commands.dispatch workspaceElement, 'taskmill-editor-atom:toggle'
+        atom.commands.dispatch workspaceElement, 'taskmill-editor-atom:chose'
         expect(taskmillEditorAtomElement).not.toBeVisible()

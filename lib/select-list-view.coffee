@@ -9,7 +9,7 @@ class MySelectListView extends SelectListView
     super()
     # no more need for the `overlay` and `from-top` classes
     @addClass('command-palette')
-    atom.commands.add 'atom-workspace', 'command-palette:toggle', => @toggle()
+    # atom.commands.add 'atom-workspace', 'command-palette:toggle', => @toggle()
 
   # You need to implement the `cancelled` method and hide.
   cancelled: ->

@@ -1,22 +1,22 @@
 # See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
-'context-menu':
-  'atom-text-editor': [
-    {
-      'label': 'Toggle taskmill-editor-atom'
-      'command': 'taskmill-editor-atom:toggle'
-    }
-  ]
-'menu': [
-  {
-    'label': 'Packages'
-    'submenu': [
-      'label': 'taskmill-editor-atom'
-      'submenu': [
-        {
-          'label': 'Toggle'
-          'command': 'taskmill-editor-atom:toggle'
-        }
-      ]
-    ]
-  }
-]
+# 'context-menu':
+#   'atom-text-editor': [
+#     {
+#       'label': 'Toggle taskmill-editor-atom'
+#       'command': 'taskmill-editor-atom:chose'
+#     }
+#   ]
+# 'menu': [
+#   {
+#     'label': 'Packages'
+#     'submenu': [
+#       'label': 'taskmill-editor-atom'
+#       'submenu': [
+#         {
+#           'label': 'Toggle'
+#           'command': 'taskmill-editor-atom:chose'
+#         }
+#       ]
+#     ]
+#   }
+# ]
