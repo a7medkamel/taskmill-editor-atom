@@ -1,6 +1,6 @@
 {
-  "name": "taskmill",
-  "displayName": "TaskMill",
+  "name": "taskmill-editor-atom",
+  "displayName": "Breadboard",
   "description": "Run Node Scripts hosted on GitHub through your editor",
   "version": "0.0.4",
   "publisher": "a7medkamel",
